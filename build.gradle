@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url "http://ptms.ink:8081/repository/codemc-nms/" }
+    maven { url "http://ptms.ink:8081/repository/maven-releases/" }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+    compile(group: "org.spigotmc", name: "spigot", version: "1.12.2-R0.1-SNAPSHOT")
+    compile fileTree(dir:'libs',include:['*.jar'])
+}
+
+test {
+    useJUnitPlatform()
+}

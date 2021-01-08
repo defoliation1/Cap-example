@@ -1,0 +1,5 @@
+main: pers.defoliation.cap.example.Main
+name: CapExample
+version: 1.0.0
+depend:
+  - CapPlugin
